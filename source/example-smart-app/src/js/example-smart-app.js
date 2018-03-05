@@ -65,6 +65,10 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
+          
+          console.log("p : " +p);
+          console.log("p.fname : " +p.fname);
+          console.log("p.lname : " +p.lname);
 
           ret.resolve(p);
         });
