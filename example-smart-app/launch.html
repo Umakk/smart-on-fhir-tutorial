@@ -20,8 +20,8 @@
         var serviceUri = getUrlParameter("iss");
         var launchContextId = getUrlParameter("launch");
             
-        console.log("serviceUri : " +serviceUri);
-        console.log("launchContextId : " +launchContextId);
+        alert("serviceUri : " +serviceUri);
+        alert("launchContextId : " +launchContextId);
         
         // The scopes that the app will request from the authorization server
         // encoded in a space-separated string:
@@ -41,8 +41,8 @@
         var launchUri = window.location.protocol + "//" + window.location.host + window.location.pathname;
         var redirectUri = launchUri.replace("launch.html","index.html");
             
-            console.log("launchUri : " +launchUri);
-        console.log("redirectUri : " +redirectUri);
+            alert("launchUri : " +launchUri);
+        alert("redirectUri : " +redirectUri);
         
         // FHIR Service Conformance Statement URL
         var conformanceUri = serviceUri + "/metadata"
