@@ -61,6 +61,7 @@
                 },
             }).done(function(pt){
                 var name = pt.name[0].given.join(" ") +" "+ pt.name[0].family.join(" ");
+                alert("patient : " +pt);
                 document.body.innerHTML += "<h3>Patient: " + name + "</h3>";
             });
         });
