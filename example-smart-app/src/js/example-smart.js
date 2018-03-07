@@ -27,7 +27,7 @@ var launchContextId = getUrlParameter("launch");
 ].join(" ");*/
 	
  var scope = [
-        "patient/Patient.read",
+        "patient/*.read",
         "patient/Observation.read",
         "online_access",
         "openid",
