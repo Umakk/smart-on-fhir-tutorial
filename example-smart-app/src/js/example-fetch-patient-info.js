@@ -1,3 +1,6 @@
+$('#response').hide();
+
+
 // get the URL parameters received from the authorization server
 var state = getUrlParameter("state");  // session key
 var code = getUrlParameter("code");    // authorization code
@@ -55,7 +58,7 @@ $.ajax(options).done(function(res){
     }).done(function(pt){
         var name = pt.name[0].given.join(" ") +" "+ pt.name[0].family.join(" ");
         alert("patient : " +pt);
-        document.body.innerHTML += "<h3>Patient: " + name + "</h3>";
+        //document.body.innerHTML += "<h3>Patient: " + name + "</h3>";
         drawVisualization(pt);
     });
 });
@@ -221,4 +224,5 @@ function defaultPatient(){
     $('#fname').html(p.name[0].text);
     $('#gender').html(p.gender);
     $('#birthdate').html(p.birthDate);
+    $('#response').show();
   };
