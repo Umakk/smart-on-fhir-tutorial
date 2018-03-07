@@ -8,10 +8,10 @@ var clientId = "f126a734-1a58-4d79-9b0a-ba8a0527e885";
 var secret = null;    // set me, if confidential
 
 // These parameters will be received at launch time in the URL
-var serviceUri = getUrlParameter("iss");
-var launchContextId = getUrlParameter("launch");
+//var serviceUri = getUrlParameter("iss");
+//var launchContextId = getUrlParameter("launch");
 	
-//var serviceUri = "https://fhir-ehr.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca";   //iss param
+var serviceUri = "https://fhir-ehr.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca";   //iss param
 //var launchContextId = "af8b7e6f-07a4-4f31-a208-f16dcaff06ab";
 	
 //alert("serviceUri : " +serviceUri);
@@ -85,7 +85,7 @@ $.get(conformanceUri, function(r){
 		"scope=" + encodeURIComponent(scope) + "&" +
 		"redirect_uri=" + encodeURIComponent(redirectUri) + "&" +
 		"aud=" + encodeURIComponent(serviceUri) + "&" +
-		"launch=" + launchContextId + "&" +
+		//"launch=" + launchContextId + "&" +
 		"state=" + state;
  }, "json");
 
