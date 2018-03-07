@@ -42,6 +42,8 @@
             // should get back the access token and the patient ID
             var accessToken = res.access_token;
             var patientId = res.patient;
+          
+          alert("patientId : " +patientId);
                     
             // and now we can use these to construct standard FHIR
             // REST calls to obtain patient resources with the
@@ -49,6 +51,7 @@
             // Let's, for example, grab the patient resource and
             // print the patient name on the screen
             var url = serviceUri + "/Patient/" + patientId;
+          alert("url : " +url);
             $.ajax({
                 url: url,
                 type: "GET",
