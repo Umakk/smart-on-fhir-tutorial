@@ -39,7 +39,7 @@ $.ajax(options).done(function(res){
     var patientId = res.patient;
     //var patientId = "1316024";
 
-    alert("patientId : " +patientId);
+    //alert("patientId : " +patientId);
 
     // and now we can use these to construct standard FHIR
     // REST calls to obtain patient resources with the
@@ -47,7 +47,7 @@ $.ajax(options).done(function(res){
     // Let's, for example, grab the patient resource and
     // print the patient name on the screen
     var url = serviceUri + "/Patient/" + patientId;
-    alert("url : " +url);
+    //alert("url : " +url);
     $.ajax({
         url: url,
         type: "GET",
