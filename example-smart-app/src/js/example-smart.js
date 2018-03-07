@@ -86,7 +86,7 @@
                 "scope=" + encodeURIComponent(scope) + "&" +
                 "redirect_uri=" + encodeURIComponent(redirectUri) + "&" +
                 "aud=" + encodeURIComponent(serviceUri) + "&" +
-                "launch=" + launchContextId + "&" +
+                //"launch=" + launchContextId + "&" +
                 "state=" + state;
          }, "json");
         
