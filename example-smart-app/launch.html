@@ -27,9 +27,18 @@
         // encoded in a space-separated string:
         //      1. permission to read all of the patient's record
         //      2. permission to launch the app in the specific context
-        var scope = [
+        /*var scope = [
                 "patient/*.read",
                 "launch"
+            ].join(" ");*/
+            
+         var scope = [
+                "patient/Patient.read",
+                "patient/Observation.read",
+                "online_access",
+                "openid",
+                "launch",
+                "profile"
             ].join(" ");
             
         // Generate a unique session key string (here we just generate a random number
