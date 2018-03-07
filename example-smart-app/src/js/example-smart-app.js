@@ -54,6 +54,8 @@
           p.lname = lname;
           p.age = parseInt(calculateAge(dob));
           p.height = getQuantityValueAndUnit(height[0]);
+		  
+		  p.jsonObj = patient;
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -65,6 +67,9 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
+		  
+		  console.log("patient jsonObj : " +p.jsonObj);
+		  console.log("patient : " +p);
 
           ret.resolve(p);
         });
@@ -90,6 +95,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+	  jsonObj: {value: ''},
     };
   }
 
