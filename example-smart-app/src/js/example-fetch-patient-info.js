@@ -56,7 +56,7 @@ $.ajax(options).done(function(res){
         var name = pt.name[0].given.join(" ") +" "+ pt.name[0].family.join(" ");
         alert("patient : " +pt);
         document.body.innerHTML += "<h3>Patient: " + name + "</h3>";
-        onReady(pt);
+        drawVisualization(pt);
     });
 });
 
@@ -77,8 +77,7 @@ function getUrlParameter(sParam)
 }
 
 function onError() {
-      console.log('Loading error', arguments);
-     
+      console.log('Loading error');
     }
 
 function onReady(smart)  {
@@ -164,7 +163,7 @@ function defaultPatient(){
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-	  jsonObj: {value: ''},
+	    jsonObj: {value: ''},
     };
   }
 
@@ -218,16 +217,8 @@ function defaultPatient(){
   }
 
   window.drawVisualization = function(p) {
-    $('#holder').show();
     $('#loading').hide();
-    $('#fname').html(p.fname);
-    $('#lname').html(p.lname);
+    $('#fname').html(p.name[0].text);
     $('#gender').html(p.gender);
-    $('#birthdate').html(p.birthdate);
-    $('#age').html(p.age);
-    $('#height').html(p.height);
-    $('#systolicbp').html(p.systolicbp);
-    $('#diastolicbp').html(p.diastolicbp);
-    $('#ldl').html(p.ldl);
-    $('#hdl').html(p.hdl);
+    $('#birthdate').html(p.birthDate);
   };
