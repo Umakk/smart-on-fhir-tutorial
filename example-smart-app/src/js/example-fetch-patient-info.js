@@ -5,6 +5,8 @@ $('#response').hide();
 var state = getUrlParameter("state");  // session key
 var code = getUrlParameter("code");    // authorization code
 
+alert("code : " +code);
+
 // load the app parameters stored in the session
 var params = JSON.parse(sessionStorage[state]);  // load app session
 var tokenUri = params.tokenUri;
