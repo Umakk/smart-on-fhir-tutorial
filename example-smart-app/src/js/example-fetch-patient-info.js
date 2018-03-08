@@ -38,8 +38,8 @@ if (secret) {
 $.ajax(options).done(function(res){
     // should get back the access token and the patient ID
     var accessToken = res.access_token;
-    //var patientId = res.patient;
-    var patientId = "1316024";
+    var patientId = res.patient;
+    //var patientId = "1316024";
 
     //alert("patientId : " +patientId);
 
