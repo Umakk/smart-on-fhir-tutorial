@@ -14,8 +14,8 @@ var launchContextId = getUrlParameter("launch");
 //var serviceUri = "https://fhir-ehr.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca";   //iss param
 //var launchContextId = "af8b7e6f-07a4-4f31-a208-f16dcaff06ab";
 	
-//alert("serviceUri : " +serviceUri);
-//alert("launchContextId : " +launchContextId);
+alert("serviceUri : " +serviceUri);
+alert("launchContextId : " +launchContextId);
 
 // The scopes that the app will request from the authorization server
 // encoded in a space-separated string:
@@ -67,6 +67,8 @@ $.get(conformanceUri, function(r){
 		tokenUri = arg.valueUri;
 	  }
 	});
+	
+	alert("authUri : " +authUri);
 	
 	// retain a couple parameters in the session for later use
 	sessionStorage[state] = JSON.stringify({
